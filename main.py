@@ -1,7 +1,7 @@
 from webserver import keep_alive
 import requests
 
-channelID = PUT THE CHANNEL ID
+channelID = 1212358060547383296
 headers = {
     "authorization":
     809758005074984961
@@ -13,6 +13,6 @@ lines = file.readlines()
 while True:
     for line in lines:
         requests.post(
-            f"https://discord.com/api/v9/channels/1212358060547383296/messages",
+            f"https://discord.com/api/v9/channels/{channelID}/messages",
             headers=headers,
             json={"content": line})
